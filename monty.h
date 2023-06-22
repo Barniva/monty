@@ -1,5 +1,9 @@
 #ifndef _MONTY_H_
 #define _MONTY_H_
+<<<<<<< HEAD
+=======
+
+>>>>>>> 56802b2aae1c14fd8459e2b27a05a2fceffe34e1
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -7,7 +11,10 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
+<<<<<<< HEAD
 #define UNUSED(x) (void)(x)
+=======
+>>>>>>> 56802b2aae1c14fd8459e2b27a05a2fceffe34e1
 
 /**
  * struct var_s - struct to contain the main variables of the Monty interpreter
@@ -16,13 +23,23 @@
  */
 typedef struct var_s
 {
+<<<<<<< HEAD
 	int queue;
 	size_t stack_len;
+=======
+        int queue;
+        size_t stack_len;
+>>>>>>> 56802b2aae1c14fd8459e2b27a05a2fceffe34e1
 } var_t;
 
 #define STACK 0
 #define QUEUE 1
+<<<<<<< HEAD
 /* global struct to work with queue an lentgh*/
+=======
+
+/* global struct to hold flag for queue and stack length */
+>>>>>>> 56802b2aae1c14fd8459e2b27a05a2fceffe34e1
 extern var_t var;
 
 /**
@@ -36,6 +53,7 @@ extern var_t var;
  */
 typedef struct stack_s
 {
+<<<<<<< HEAD
 	int n;
 	struct stack_s *prev;
 	struct stack_s *next;
@@ -43,6 +61,15 @@ typedef struct stack_s
 
 /**
  * struct instruction_s - opcode and its function
+=======
+        int n;
+        struct stack_s *prev;
+        struct stack_s *next;
+} stack_t;
+
+/**
+ * struct instruction_s - opcoode and its function
+>>>>>>> 56802b2aae1c14fd8459e2b27a05a2fceffe34e1
  * @opcode: the opcode
  * @f: function to handle the opcode
  *
@@ -51,6 +78,7 @@ typedef struct stack_s
  */
 typedef struct instruction_s
 {
+<<<<<<< HEAD
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
@@ -128,3 +156,12 @@ void error_mul(unsigned int Linenumber);
 
 
 #endif /* _MONTY_H_ */
+=======
+        char *opcode;
+        void (*f)(stack_t **stack, unsigned int line_number);
+} instruction_t;
+
+void m_push(stack_t **stack, unsigned int line_number);
+void m_pall(stack_t **stack, unsigned int line_number);
+#endif
+>>>>>>> 56802b2aae1c14fd8459e2b27a05a2fceffe34e1
