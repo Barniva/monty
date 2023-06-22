@@ -57,4 +57,5 @@ typedef struct instruction_s
 } instruction_t;
 
 void m_push(stack_t **stack, unsigned int line_number);
+void m_pall(stack_t **stack, unsigned int line_number);
 #endif
